@@ -1,0 +1,308 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8e1;
+    margin: 30;
+    padding: 30;
+    color: #333;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: #09098a;
+}
+
+a:hover {
+    color: #f57f17;
+}
+
+
+.main-header {
+    background-color: #950004;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-header a {
+    color: white;
+}
+
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+
+.main-nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    background-color: #f44336;
+    gap: 2vw;
+}
+
+.main-nav li {
+    margin: 0;
+}
+
+.main-nav a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.main-nav a:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+}
+
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%; 
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    transition: transform 0.6s ease;
+}
+
+.slide {
+    width: 100%;
+    flex: 1 0 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+
+input[name="carousel"] {
+    display: none;
+}
+
+
+#slide1:checked ~ .slides {
+    transform: translateX(0%);
+}
+#slide2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+#slide3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+
+.carousel-nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-nav label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#slide1:checked ~ .carousel-nav label[for="slide1"],
+#slide2:checked ~ .carousel-nav label[for="slide2"],
+#slide3:checked ~ .carousel-nav label[for="slide3"] {
+    background-color: #8d1717;
+}
+
+
+.main-content {
+    padding: 15px;
+}
+
+
+.combos-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: #ffe082;
+    padding: 40px;
+}
+
+.combos-title {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: #d32f2f;
+    margin-bottom: 20px;
+}
+
+.combo-card {
+    background-color: white;
+    border: 2px solid #f57f17;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+    text-align: justify;
+}
+
+.combo-card img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover; /
+    border-radius: 5px;
+}
+
+.combo-content p,
+.combo-content li {
+    text-align: justify;
+}
+
+.combo-content ul {
+    text-align: left;
+    margin-left: 20px;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d32f2f;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #fbc02d;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+button:hover {
+    background-color: #f57f17;
+    color: white;
+}
+
+
+.contact-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffccbc;
+}
+
+
+.contact-form-section {
+    background-color: #fffde7;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: auto;
+    text-align: justify;
+}
+
+.contact-form-section h2 {
+    text-align: center;
+    color: #9b1919;
+}
+
+.contact-form-section img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.job-application-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.job-application-form label {
+    font-weight: bold;
+}
+
+.job-application-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.about-section {
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff3e0;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: justify;
+}
+
+.about-section h3 {
+    text-align: center;
+    color: #d32f2f;
+}
+
+.about-section img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e22b2b;
+    color: white;
+}
+
+
+@media (max-width: 600px) {
+    .combo-card {
+        width: 100%;
+    }
+
+    .carousel-container {
+        height: 200px; 
+    }
+
+    .slide img {
+        object-fit: cover;
+    }
+}
